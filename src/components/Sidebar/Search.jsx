@@ -17,7 +17,8 @@ import {
 import { SearchLogo } from "../../assets/constants";
 import useSearchUser from "../../hooks/useSearchUser";
 import { useRef } from "react";
-import SuggestedUser from "../SuggestedUsers/SuggestedUser";
+import SuggestedUser from "../../SuggestedUsers/SuggestedUser";
+
 
 const Search = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
