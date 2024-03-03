@@ -12,6 +12,7 @@ import { firestore, storage } from '../../firebase/firebase'
 import { deleteObject,ref } from 'firebase/storage'
 import { arrayRemove, deleteDoc, doc, updateDoc } from 'firebase/firestore'
 import usePostStore from '../../store/postStore'
+import Caption from '../Comment/Caption'
 
 
 const ProfilePost = ({ post }) => {
@@ -131,8 +132,10 @@ const ProfilePost = ({ post }) => {
                                     </Flex>
 
 
-                                    {authUser?.uid=== userProfile.uid && (
-                                        <Button 
+
+                                    {authUser?.uid === userProfile.uid && (
+                                    
+                                    <Button 
                                     size={"sm"}
                                     bg={"transparent"}
                                     _hover={{ bg: "whiteAlpha.300",color: "red.600" }}
@@ -141,6 +144,7 @@ const ProfilePost = ({ post }) => {
                                     onClick={handleDeletePost}>
                                         <MdDelete size={20} cursor="pointer" />
                                     </Button>
+                                    
                                     ) }
 
                                 </Flex>
@@ -148,27 +152,21 @@ const ProfilePost = ({ post }) => {
                                 <Divider my={4} bg={"gray.500"} />
 
                                 <VStack w="full" alignItems={"start"} maxH={"350px"} overflowY={"auto"}>
-                                <Comment
-                                createdAt='1d ago'
-                                username='shiven24k'
-                                profilePic='/profilepic.jpg'
-                                text={"Dummy images for a project"}
-                                />
-                                <Comment
-                                createdAt={"12h ago"}
-                                username={"abrahmov"}
-                                profilePic={"https://bit.ly/dan-abramov"}
-                                text={"Nice pic"}
-                                />
+                                {/* caption */}
+                                {post.caption && <Caption post={post}/>}
+                                {/* comment */}
+                                 {post.comments.map((comment => (
+                                    <Comment key={comment.id} comment={comment}/>
+                                 )))}
                                
                                 
                                
                                 </VStack>
-                                <Divider my={4} bg={"gray.8000"} />
+                                <Divider my={4} bg={"gray.500"} />
 
-                                <PostFooter isProfilePage={"true"}/>
+                                <PostFooter isProfilePage={"true"} post={post}/>
 
-                        
+                                
 
                             </Flex>
                         </Flex>
