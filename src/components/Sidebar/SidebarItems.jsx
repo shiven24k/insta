@@ -3,6 +3,7 @@ import Home from "./Home";
 import Notifications from "./Notifications";
 import ProfileLink from "./ProfileLink";
 import Search from "./Search";
+// import Toggle from "./Toggle";
 
 const SidebarItems = () => {
 	return (
@@ -11,7 +12,9 @@ const SidebarItems = () => {
 			<Search />
 			<Notifications />
 			<CreatePost />
+			{/* <Toggle /> */}
 			<ProfileLink />
+			
 		</>
 	);
 };
