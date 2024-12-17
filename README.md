@@ -2,6 +2,7 @@
 
 This project is a social media clone built with React, Chakra UI, and Firebase. It aims to replicate the basic functionality of popular social media platforms, allowing users to create accounts, post content, interact with posts, and connect with other users.
 ![image](https://github.com/shiven24k/insta/assets/65511405/d51a2079-1b41-4dbc-aac9-05397b1497c8)
+Link:-https://socialmedia-citadel.vercel.app/
 
 ## Features
 
