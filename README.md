@@ -1,7 +1,8 @@
 # Social Media Clone
 
 This project is a social media clone built with React, Chakra UI, and Firebase. It aims to replicate the basic functionality of popular social media platforms, allowing users to create accounts, post content, interact with posts, and connect with other users.
-![image](https://github.com/shiven24k/insta/assets/65511405/d51a2079-1b41-4dbc-aac9-05397b1497c8)
+![image](https://github.com/user-attachments/assets/0ac0f648-247f-4e24-8a42-7674c7a607ae)
+
 Link:-https://socialmedia-citadel.vercel.app/
 
 ## Features
@@ -30,7 +31,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/shiven24k/insta.git
+git clone https://github.com/shiven24k/anisnap.git
 ```
 2. Go to git directory
 ```bash
